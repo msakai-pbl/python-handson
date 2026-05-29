@@ -18,6 +18,8 @@ jobs:
       - name: 静的検査（flake8）
         run: |
           flake8 . --count --show-source --statistics --exclude=./test_*.py
+      - name: テストファイルの一覧
+        run: ls ./test_*.py
       - name: テスト（pytest）
         run: |
           pytest test_*.py
